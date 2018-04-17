@@ -84,7 +84,7 @@ const createTestsForTask = function ({ cwd, task, testCases, tempDirectory }) {
           return;
         }
 
-        await expected.validate({ dirname: tempTestDirectory });
+        await expected.validate({ dirname: tempTestDirectory, stdout: result.stdout, stderr: result.stderr });
       });
     });
   });
